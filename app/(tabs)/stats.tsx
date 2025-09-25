@@ -10,7 +10,7 @@ import {
     View,
 } from "react-native";
 
-type Timer = { date: string; duration: number };
+type Timer = { date: string; duration: number; routeType: string };
 
 export default function Stats() {
   const [timers, setTimers] = useState<Timer[]>([]);
@@ -115,7 +115,7 @@ export default function Stats() {
               ]}
             >
               <Text style={styles.duration}>{formatTime(item.duration)}</Text>
-              <Text style={styles.date}>{new Date(item.date).toLocaleString()}</Text>
+              <Text style={styles.date}>{new Date(item.date).toLocaleString()} / {item.routeType}</Text>
             </Pressable>
           );
         }}
