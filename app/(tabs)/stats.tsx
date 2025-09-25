@@ -10,7 +10,7 @@ import {
     View,
 } from "react-native";
 
-type Timer = { date: string; duration: number; routeType: string };
+type Timer = { date: string; duration: number; routeType: "Forest" | "Road" };
 
 export default function Stats() {
   const [timers, setTimers] = useState<Timer[]>([]);

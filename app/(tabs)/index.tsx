@@ -2,7 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useRef, useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-type TimerEntry = { date: string; duration: number; routeType: string };
+type TimerEntry = { date: string; duration: number; routeType: "Forest" | "Road" };
 
 export default function Index() {
   const [running, setRunning] = useState(false);
@@ -10,7 +10,7 @@ export default function Index() {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const startTimeRef = useRef<number | null>(null);
 
-  const [route, setRoute] = useState("Forest");
+  const [route, setRoute] = useState<"Forest" | "Road">("Forest");
 
   useEffect(() => {
     return () => {
