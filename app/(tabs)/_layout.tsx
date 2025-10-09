@@ -22,6 +22,7 @@ export default function TabsLayout() {
     >
       <Tabs.Screen name="index" options={{ title: "Timer" }} />
       <Tabs.Screen name="stats" options={{ title: "Statistics" }} />
+      <Tabs.Screen name="charts" options={{ title: "Charts" }} />
     </Tabs>
   );
 }
